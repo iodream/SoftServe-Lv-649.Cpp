@@ -80,6 +80,9 @@ public:
   AnyType(double dd);
   AnyType(long double dd);
 
+  //copy constructor
+  AnyType(AnyType& other);
+
   ~AnyType();
 
   //print the value

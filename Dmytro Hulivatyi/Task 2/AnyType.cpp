@@ -135,6 +135,73 @@ AnyType::AnyType(long double dd)
   ld = dd;
 }
 
+//copy constructor
+AnyType::AnyType(AnyType& other)
+{
+    vartype=other.vartype;
+    vartype_str=other.vartype_str;
+    switch(other.vartype)
+    {
+        case boolean:
+          b=other.b;
+          break;
+        case character:
+          c=other.c;
+          break;
+        case signed_char:
+          sc=other.sc;
+          break;
+        case unsigned_char:
+          usc=other.usc;
+          break;
+        case widechar:
+          wch=other.wch;
+          break;
+        case char_16:
+          ch16=other.ch16;
+          break;
+        case char_32:
+          ch32=other.ch32;
+          break;
+
+        case integer:
+          i=other.i;
+          break;
+        case unsigned_int:
+          ui=other.ui;
+          break;
+        case short_int:
+          si=other.si;
+          break;
+        case long_int:
+          li=other.li;
+          break;
+        case unsigned_long_int:
+          uli=other.uli;
+          break;
+        case unsigned_short_int:
+          usi=other.usi;
+          break;
+        case long_long_int:
+          lli=other.lli;
+          break;
+        case unsigned_long_long_int:
+          ulli=other.ulli;
+          break;
+
+        case floating_point:
+          f=other.f;
+          break;
+        case floating_double:
+          d=other.d;
+          break;
+         case floating_long_double:
+          ld=other.ld;
+          break;
+    }
+}
+
+
 //destructor
 AnyType::~AnyType()
 {
