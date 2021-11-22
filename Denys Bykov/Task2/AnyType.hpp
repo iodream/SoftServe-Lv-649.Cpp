@@ -22,7 +22,8 @@ int get_index()
     return type_index<Target, T...>().value;
 }
 
-constexpr int max(int val1, int val2) {
+constexpr int max(int val1, int val2)
+{
     return (val1 > val2) ? val1 : val2;
 }
 
@@ -155,8 +156,7 @@ class AnyType
                          char16_t, char32_t, int, unsigned int, short int,
                          unsigned short int, long int, unsigned long int,
                          long long int, unsigned long long int, float,
-                         double, long double>
-{
+                         double, long double> {
 public:
     enum class Type {
     NoType = -1,
