@@ -23,10 +23,10 @@ void report_result(
     os << res.first << "\n";
     os << std::setw(max_res_len) << std::left;
     os << "Count of blank lines:";
-    os << res.second.comment_lines_num << "\n";
+    os << res.second.blank_lines_num << "\n";
     os << std::setw(max_res_len) << std::left;
     os << "Count of comment lines:";
-    os << res.second.blank_lines_num << "\n";
+    os << res.second.comment_lines_num << "\n";
     os << std::setw(max_res_len) << std::left;
     os << "Count of code lines:";
     os << res.second.code_lines_num << "\n";
