@@ -4,7 +4,7 @@
 
 using namespace std;
 
-vector<string> ArgParser::NormalizeArgs(int argc, const char** argv)
+vector<string> ArgParser::GetNormalizedArgs()
 {
     vector<string> res{};
     bool is_enquoted = false;
@@ -38,7 +38,7 @@ vector<string> ArgParser::NormalizeArgs(int argc, const char** argv)
 
 ArgParser::Result ArgParser::Parse()
 {
-    auto args = NormalizeArgs(argc, argv);
+    auto args = GetNormalizedArgs();
     if (args.size() < 1)
         throw ArgParserError("Not enough arguments");
 
@@ -66,7 +66,7 @@ ArgParser::Result ArgParser::Parse()
             try {
                 res.threads_num = stoi(*it);
             }
-            catch (const exception& ex) {
+            catch (const exception&) {
                 res.threads_num = -1;
             }
         }

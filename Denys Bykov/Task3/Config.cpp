@@ -4,7 +4,7 @@
 using namespace std;
 using namespace std::filesystem;
 
-void Config::FillExtensions(Lang lang)
+void Config::FillExtensions()
 {
     switch (lang) {
         case Lang::c_cpp:
@@ -20,12 +20,13 @@ void Config::FillExtensions(Lang lang)
 
 Config::Config(const ArgParser::Result& args, Lang lang):
     extensions{},
+    lang{lang},
     source_d{args.source_d},
     output_f{args.output_f},
     threads_num{args.threads_num},
     output_to_file{args.output_to_file}
 {
-    FillExtensions(lang);
+    FillExtensions();
     if (!exists(source_d) || !is_directory(source_d))
         throw ConfigError("Unable to find specified source directory");
     if (output_to_file) {

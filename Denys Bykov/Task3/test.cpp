@@ -29,7 +29,7 @@ public:
 
 TEST_F(ArgParserTest, ArgSet1)
 {
-    int argc = arg_set_1.size();
+    int argc = static_cast<int>(arg_set_1.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_1[i].c_str();
@@ -48,7 +48,7 @@ TEST_F(ArgParserTest, ArgSet1)
 
 TEST_F(ArgParserTest, ArgSet2)
 {
-    int argc = arg_set_2.size();
+    int argc = static_cast<int>(arg_set_2.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_2[i].c_str();
@@ -71,7 +71,7 @@ TEST_F(ArgParserTest, ArgSet2)
 
 TEST_F(ArgParserTest, ArgSet3)
 {
-    int argc = arg_set_3.size();
+    int argc = static_cast<int>(arg_set_3.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_3[i].c_str();
@@ -90,7 +90,7 @@ TEST_F(ArgParserTest, ArgSet3)
 
 TEST_F(ArgParserTest, ArgSet4)
 {
-    int argc = arg_set_4.size();
+    int argc = static_cast<int>(arg_set_4.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_4[i].c_str();
@@ -133,7 +133,7 @@ public:
 
 TEST_F(AnalyzerTest, FormTasks)
 {
-    int argc = arg_set_1.size();
+    int argc = static_cast<int>(arg_set_1.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_1[i].c_str();
@@ -172,7 +172,7 @@ TEST_F(AnalyzerTest, FormTasks)
 
 TEST_F(AnalyzerTest, FileC)
 {
-    int argc = arg_set_1.size();
+    int argc = static_cast<int>(arg_set_1.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_1[i].c_str();
@@ -191,7 +191,7 @@ TEST_F(AnalyzerTest, FileC)
 
 TEST_F(AnalyzerTest, FileH)
 {
-    int argc = arg_set_1.size();
+    int argc = static_cast<int>(arg_set_1.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_1[i].c_str();
@@ -210,7 +210,7 @@ TEST_F(AnalyzerTest, FileH)
 
 TEST_F(AnalyzerTest, FileCPP)
 {
-    int argc = arg_set_1.size();
+    int argc = static_cast<int>(arg_set_1.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_1[i].c_str();
@@ -229,7 +229,7 @@ TEST_F(AnalyzerTest, FileCPP)
 
 TEST_F(AnalyzerTest, FileHPP)
 {
-    int argc = arg_set_1.size();
+    int argc = static_cast<int>(arg_set_1.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_1[i].c_str();
@@ -248,7 +248,7 @@ TEST_F(AnalyzerTest, FileHPP)
 
 TEST_F(AnalyzerTest, Analyze)
 {
-    int argc = arg_set_1.size();
+    int argc = static_cast<int>(arg_set_1.size());
     const char** argv{new const char*[argc]};
     for (int i = 0; i < argc; i++) {
         argv[i] = arg_set_1[i].c_str();

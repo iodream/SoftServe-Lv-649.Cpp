@@ -37,7 +37,7 @@ public:
     int threads_num;
     bool output_to_file;
 private:
-    void FillExtensions(Lang lang);
+    void FillExtensions();
 public:
     Config(const ArgParser::Result& args, Lang lang=Lang::c_cpp);
 };

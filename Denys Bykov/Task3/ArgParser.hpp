@@ -41,7 +41,7 @@ public:
 private:
     // remove program name from args and put enquoted args
     // into the single sntrings.
-    std::vector<std::string> NormalizeArgs(int argc, const char** argv);
+    std::vector<std::string> GetNormalizedArgs();
 public:
     ArgParser(int argc, const char** argv) : argc{argc}, argv{argv} {}
     Result Parse();
