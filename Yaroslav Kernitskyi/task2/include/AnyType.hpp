@@ -1,3 +1,6 @@
+#ifndef ANYTYPE_HPP
+#define ANYTYPE_HPP
+
 #include "Utils.hpp"
 #include "TypeName.hpp"
 
@@ -149,3 +152,5 @@ using AnyType = AnyTypeImplementation<
     float,
     double,
     long double>;
+
+#endif /* ANYTYPE_HPP */

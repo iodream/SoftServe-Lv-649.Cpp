@@ -1,3 +1,6 @@
+#ifndef TYPENAME_HPP
+#define TYPENAME_HPP
+
 #include <string_view>
 
 // Best way i could think of
@@ -43,3 +46,5 @@ template <>
 constexpr std::string_view type_name<double> = "double";
 template <>
 constexpr std::string_view type_name<long double> = "long double";
+
+#endif /* TYPENAME_HPP */

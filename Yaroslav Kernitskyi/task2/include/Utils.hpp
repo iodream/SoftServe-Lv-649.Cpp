@@ -1,3 +1,6 @@
+#ifndef UTILS_HPP
+#define UTILS_HPP
+
 #include <cstddef>
 
 // Some utility functions
@@ -35,3 +38,5 @@ template <typename T, typename... Ts>
 constexpr bool distinct = (!is_in_list<T, Ts...> && distinct<Ts...>);
 template <typename T>
 constexpr bool distinct<T> = true;
+
+#endif /* UTILS_HPP */
