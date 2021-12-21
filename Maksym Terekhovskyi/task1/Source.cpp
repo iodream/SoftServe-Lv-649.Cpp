@@ -6,6 +6,9 @@ int main() {
 	char** list = nullptr;
 
 	StringListAdd(&list, _strdup("ijbnif"));
+	StringListRemove(&list, "ijbnif");
+	StringListDestroy(&list);
+
 	StringListAdd(&list, _strdup("ijasdabniseff"));
 	StringListAdd(&list, _strdup("ijbnsfsfif"));
 	StringListAdd(&list, _strdup("ijbnif"));

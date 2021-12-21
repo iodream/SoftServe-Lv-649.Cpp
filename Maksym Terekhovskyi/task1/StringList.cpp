@@ -29,15 +29,20 @@ void StringListPrint(char** list) {
 }
 
 void StringListDestroy(char*** list_ptr) {
-    char** list = *list_ptr;
-    char** nextNode = nullptr;
+    if (*list_ptr != NULL || *list_ptr != nullptr) {
+        char** list = *list_ptr;
+        char** nextNode = nullptr;
 
-    for (; list; list = nextNode) {
-        free(list[keyIndex]);
-        nextNode = (char**)list[nextIndex];
-        free(list);
+        for (; list; list = nextNode) {
+            free(list[keyIndex]);
+            nextNode = (char**)list[nextIndex];
+            free(list);
+        }
+        *list_ptr = nullptr;
     }
-    *list_ptr = nullptr;
+    else {
+        cout << "Your StringList is empty\n";
+    }    
 }
 
 void StringListRemove(char*** list_ptr, const char* str) {
