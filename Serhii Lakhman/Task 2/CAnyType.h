@@ -18,13 +18,13 @@ public:
 	~CAnyType();
 	
 	template <class T1>
-	static bool IsCorrectType(CAnyType<T>& FirstObject, CAnyType<T1>& SecondObject);
+	static bool IsCorrectType(const CAnyType<T>& FirstObject, const CAnyType<T1>& SecondObject);
 	void static MySwap( CAnyType<T>& FirstObject,  CAnyType<T>& SecondObject);
 		
 	template <class T1>
 	friend ostream& operator << (ostream& output, const CAnyType<T1>& Varible);
 	CAnyType<T>& operator =(const CAnyType<T>& other);
-	CAnyType<T>& operator=(T const Variable);
+	CAnyType<T>& operator=(const T Variable);
 
 	void destroy();
 	string GetType();

@@ -80,7 +80,8 @@ template<class T>
 inline CAnyType<T>& CAnyType<T>::operator=(const CAnyType<T>& other)
 {
 	
-	if (this == &other)			return *this;
+	if (this == &other)		
+		return *this;
 	
 	destroy();
 
@@ -107,7 +108,7 @@ inline ostream& operator<<(ostream& output, const CAnyType<T1>& Varible)
 
 
 template<class T>
-inline CAnyType<T>& CAnyType<T>::operator=(T const Variable)
+inline CAnyType<T>& CAnyType<T>::operator=(const T Variable)
 {
 
 		destroy();
@@ -125,7 +126,7 @@ inline CAnyType<T>& CAnyType<T>::operator=(T const Variable)
 
 template<class T>
 template<class T1>
-inline bool CAnyType<T>::IsCorrectType(CAnyType<T>& FirstObject, CAnyType<T1>& SecondObject)
+inline bool CAnyType<T>::IsCorrectType(const CAnyType<T>& FirstObject, const CAnyType<T1>& SecondObject)
 {
 	return FirstObject.GetType() == SecondObject.GetType();
 }

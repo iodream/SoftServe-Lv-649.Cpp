@@ -8,9 +8,7 @@ public:
 	
 	MyExceptoin(const char *msg):exception(msg)
 	{
-
-		std::cout << "!!! CAnyType exception !!!" << std::endl;
-		std::cout << "The variable that you want cast is not ";
+		std::cout << "Something go wrong, when you try cast " << msg  << " to another type of data" << std::endl;
 	}
 
 
