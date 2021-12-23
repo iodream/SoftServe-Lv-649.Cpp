@@ -1,0 +1,6 @@
+the number of files in the folder: 20
+the number of processed C/C++ files: 1
+amount of all the blank lines in the folder: 0
+amount of all the blank lines in the folder: 38
+amount of all the code lines in the folder: 188
+time of execution is 0.0767721 s
