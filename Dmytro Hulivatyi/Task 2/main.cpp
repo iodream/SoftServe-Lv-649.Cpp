@@ -28,7 +28,7 @@ int main()
     {
         outside = val1.ToFloat();
     }
-    catch(runtime_error& err)
+    catch(const runtime_error& err)
       {
         cout << err.what() << endl;
       }
