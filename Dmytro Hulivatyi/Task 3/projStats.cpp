@@ -50,11 +50,11 @@ void CountMultiLineCommentLines(const vector<string> &lines, int& nRes)
                         break;
                     }
                     else
-                        {
-                            nCommentLinesMulti+= (j - i) + 1;   //count the lines between
-                            i = j;                              //start next search after the lines we just searched
-                            break;
-                        }
+                    {
+                        nCommentLinesMulti+= (j - i) + 1;   //count the lines between
+                        i = j;                              //start next search after the lines we just searched
+                        break;
+                    }
 
             }
     }
