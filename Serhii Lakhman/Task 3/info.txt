@@ -1,0 +1,6 @@
+Empty lines:         194             
+Commented lines:     51              
+Code lines:          272             
+All lines:           523             
+File processed:      4               
+Spended time:        0.014878        
